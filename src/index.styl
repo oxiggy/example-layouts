@@ -1,0 +1,149 @@
+
+body 
+  background #d1d1d1
+  color #FFFFFF
+  margin 0
+  
+
+/*				Float
+*/
+.float-wrapper
+	max-width 800px
+	padding 0 15px
+	margin 0 auto
+	border 1px solid #ff0
+	
+.float-row
+	background pink
+	margin 0 -15px
+	
+.float-row:after
+	content ""
+	display block
+	clear both
+	
+.float-wrapper .col
+	tex-align center
+	background #f1788d
+	min-height 100px
+	float left
+	margin 15px
+	width calc(100% / 4 - 30px )
+	
+	@media screen and (max-width: 800px)
+		width calc(100% / 2 - 30px )
+		
+.float-wrapper .col:nth-child(4n+5)
+	clear both 
+
+@media screen and (max-width: 800px)
+	.float-wrapper .col:nth-child(4n+5)
+		clear none
+		
+	.float-wrapper .col:nth-child(2n+3)
+		clear both
+
+
+/*				Inline block
+*/	
+.inline-block-wrapper
+	max-width 800px
+	padding 0 15px
+	margin 0 auto
+	border 1px solid #ff0
+	
+.inline-block-row
+	background #e1b9f1
+	margin 0 -15px
+	font-size 0
+	
+	@media screen and (max-width: 800px)
+		text-align center
+	
+	
+.inline-block-wrapper .col
+	tex-align center
+	background #b85bdd
+	min-height 100px 
+	display inline-block
+	vertical-align top
+	// vertical-align middle
+	margin 15px
+	width calc(100% / 4 - 30px )
+	font-size 16px
+	
+	@media screen and (max-width: 800px)
+		width calc(100% / 2 - 30px )
+	
+
+/*				Flex
+*/
+
+.flex-wrapper
+	max-width 800px
+	padding 0 15px
+	margin 0 auto
+	border 1px solid #ff0
+	
+.flex-row
+	background #9798d3
+	margin 0 -15px
+	display flex
+	flex-wrap wrap
+	justify-content center
+	//align-items center
+
+	
+	@media screen and (max-width: 800px)
+		text-align center
+	
+	
+.flex-wrapper .col
+	tex-align center
+	background #3a3de1
+	min-height 100px 
+
+	// vertical-align middle
+	margin 15px
+	width calc(100% / 4 - 30px )
+
+	
+	@media screen and (max-width: 800px)
+		width calc(100% / 2 - 30px )
+
+
+/*				Grid
+*/
+.grid-wrapper
+	max-width 800px
+	padding 0 15px
+	margin 0 auto
+	border 1px solid #ff0
+	
+.grid-row
+	background #b9e5f1
+	display grid
+	/*Если мы знаем количество элементов и можем рассчитать значения
+	grid-template-columns repeat(10, 1fr) */
+	grid-template-columns repeat(auto-fit, minmax(177px, 1fr))
+	grid-gap 30px
+
+	
+	@media screen and (max-width: 800px)
+		text-align center
+	
+	
+.grid-wrapper .col
+	tex-align center
+	background #46e9c8
+	min-height 100px
+	
+	/* Если мы знаем количество элементов и можем рассчитать значения
+	grid-column span 3
+	
+	@media screen and (max-width: 800px)
+		grid-column span 5*/
+		
+
+
+
